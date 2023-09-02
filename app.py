@@ -35,4 +35,5 @@ if button:
         model = pickle.load(f)
         prediction = model.predict([[CO_aqival, Ozone_aqival, NO2_aqival, PM25_aqival, category[CO_aqicat], category[Ozone_aqicat],
                                      category[NO2_aqicat], category[PM25_aqicat]]])
+        st.write("Air Quality :", prediction)
         st.write("Air Quality :", status(prediction))
