@@ -11,7 +11,7 @@ def status(AQI_value):
     elif AQI_value <= 100:
         return "Moderate"
     elif AQI_value <= 150:
-        return "Unhealthy for Sensitive people"   
+        return "Unhealthy for Sensitive Groups"   
     elif AQI_value <= 200:
         return "Unhealthy"
     elif AQI_value <= 300:
