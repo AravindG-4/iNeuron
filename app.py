@@ -30,13 +30,6 @@ Ozone_aqicat = status(Ozone_aqival)
 NO2_aqicat = status(NO2_aqival)
 PM25_aqicat = status(PM25_aqival)
 
-st.write("""
-<style>
-.audio-iframe-container {
-    display: none !important;
-}
-</style>
-""")
 
 button = st.button("Predict")
 if button:
