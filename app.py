@@ -38,3 +38,4 @@ if button:
                                       category[PM25_aqicat]]])
         st.write("AQI value :", prediction)
         st.write("AIR STATUS :", status(prediction))
+        st.warning('This is a warning', icon="⚠️")
