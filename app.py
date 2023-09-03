@@ -40,4 +40,6 @@ if button:
         st.write("AIR STATUS :", status(prediction))
         if status(prediction) == "Very Unhealthy" or "Hazardous" :
             st.warning('This is dangerous', icon="⚠️")
-            st.audio('alert', format="audio/mp3", start_time=0)
+            audio = open("alert.mp3",'rb')
+            alert = audio.read()
+            st.audio(alert, format="mp3", start_time=0)
