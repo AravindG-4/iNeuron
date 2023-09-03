@@ -21,9 +21,9 @@ def status(AQI_value):
         return "Hazardous" 
 
 CO_aqival = st.slider("CO AQI Value", 0, 500)
-Ozone_aqival = st.number_input("Ozone AQI Value", min_value=0, max_value = 500)
-NO2_aqival = st.number_input("NO2 AQI Value", min_value=0, max_value = 500)
-PM25_aqival = st.number_input("PM2.5 AQI Value", min_value=0, max_value = 500)
+Ozone_aqival = st.slider("Ozone AQI Value", 0, 500)
+NO2_aqival = st.slider("NO2 AQI Value", 0, 500)
+PM25_aqival = st.slider("PM2.5 AQI Value", 0, 500)
 
 CO_aqicat = status(CO_aqival)
 Ozone_aqicat = status(Ozone_aqival)
