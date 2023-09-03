@@ -1,6 +1,7 @@
 import streamlit as st
 import pickle
 from playsound import playsound
+import subprocess
 st.title("AIR Quality Prediction")
 
 
@@ -43,5 +44,5 @@ if button:
         if status(prediction) == "Very Unhealthy" or status(prediction) == "Hazardous" :
             st.warning('This is dangerous', icon="⚠️")
             while True:
-                playsound("alert.mp3")
+                subprocess.run(playsound("alert.mp3"))
                 break
