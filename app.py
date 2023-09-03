@@ -38,4 +38,6 @@ if button:
                                       category[PM25_aqicat]]])
         st.write("AQI value :", prediction)
         st.write("AIR STATUS :", status(prediction))
-        st.warning('This is a warning', icon="⚠️")
+        if status(prediction) == "Very Unhealthy" or "Hazardous" :
+            st.warning('This is dangerous', icon="⚠️")
+            st.audio('alert', format="audio/mp3", start_time=0)
