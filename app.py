@@ -1,7 +1,7 @@
 import streamlit as st
 import pickle
-from playsound import playsound
-import subprocess
+from pydub import AudioSegment
+from pydub.playback import play
 st.title("AIR Quality Prediction")
 
 
@@ -43,4 +43,8 @@ if button:
         st.write("AIR STATUS :", status(prediction))
         if status(prediction) == "Very Unhealthy" or status(prediction) == "Hazardous" :
             st.warning('This is dangerous', icon="⚠️")
+            while True:
+                audio = AudioSegment.from_mp3('alert.mp3')
+                play(audio)
+                break
            
