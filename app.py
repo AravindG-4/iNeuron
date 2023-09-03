@@ -1,6 +1,7 @@
 import streamlit as st
-st.title("AIR Quality Prediction")
 import pickle
+from playsound import playsound
+st.title("AIR Quality Prediction")
 
 
 category = {'Good':0, 'Hazardous':1, 'Moderate':2, 'Unhealthy':3,
@@ -39,8 +40,8 @@ if button:
                                       category[PM25_aqicat]]])
         st.write("AQI value :", prediction)
         st.write("AIR STATUS :", status(prediction))
-        if status(prediction) == "Very Unhealthy" or "Hazardous" :
+        if status(prediction) == "Very Unhealthy" or status(prediction) == "Hazardous" :
             st.warning('This is dangerous', icon="⚠️")
-            audio = open("alert.mp3",'rb')
-            alert = audio.read()
-            st.audio(alert, format="mp3", start_time=0)
+            while True:
+                playsound("alert.mp3")
+                break
