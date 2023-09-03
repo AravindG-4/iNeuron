@@ -2,6 +2,7 @@ import streamlit as st
 st.title("AIR Quality Prediction")
 import pickle
 
+
 category = {'Good':0, 'Hazardous':1, 'Moderate':2, 'Unhealthy':3,
  'Unhealthy for Sensitive Groups':4, 'Very Unhealthy':5}
 
@@ -19,7 +20,7 @@ def status(AQI_value):
     elif AQI_value > 300:
         return "Hazardous" 
 
-CO_aqival = st.number_input("CO AQI Value", min_value = 0, max_value = 500)
+CO_aqival = st.slider("CO AQI Value", 0, 500)
 Ozone_aqival = st.number_input("Ozone AQI Value", min_value=0, max_value = 500)
 NO2_aqival = st.number_input("NO2 AQI Value", min_value=0, max_value = 500)
 PM25_aqival = st.number_input("PM2.5 AQI Value", min_value=0, max_value = 500)
