@@ -43,5 +43,4 @@ if button:
         st.write("AIR STATUS :", status(prediction))
         if status(prediction) == "Very Unhealthy" or status(prediction) == "Hazardous" :
             st.warning('This is dangerous', icon="⚠️")
-            audio_file = st.file_uploader("alert.mp3", type=["mp3", "wav"])
-            st.markdown(f'<audio controls src="data:audio/{audio_file.type};base64,{audio_file.read().decode("utf-8")}"></audio>', unsafe_allow_html=True)
+           
